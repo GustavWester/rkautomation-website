@@ -1,0 +1,33 @@
+{
+  "name": "rk-automation-website",
+  "version": "1.0.0",
+  "description": "RK Automation - AI-Powered Invoice Automation Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 8000",
+    "serve": "python3 -m http.server 8000",
+    "build": "echo 'No build process needed for static site'",
+    "deploy": "echo 'Deploy to your preferred hosting service'"
+  },
+  "keywords": [
+    "automation",
+    "n8n",
+    "invoice",
+    "ai",
+    "workflow",
+    "business-automation"
+  ],
+  "author": "RK Automation",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/rk-automation-website.git"
+  },
+  "homepage": "https://rkautomation.com"
+}
