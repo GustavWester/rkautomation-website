@@ -245,6 +245,30 @@ body {
     gap: 1rem;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+}
+
+.btn-demo {
+    padding: 1rem 2rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--primary-color);
+    color: white;
+    box-shadow: var(--shadow);
+}
+
+.btn-demo:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+    background: var(--accent-color);
 }
 
 .btn-primary, .btn-secondary {
@@ -332,29 +356,17 @@ section {
     align-items: center;
 }
 
-.portrait-placeholder {
+.portrait-image {
     width: 250px;
     height: 300px;
-    background: var(--surface);
-    border: 2px dashed var(--border);
+    object-fit: cover;
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-secondary);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
 }
 
-.portrait-placeholder i {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    opacity: 0.5;
-}
-
-.portrait-placeholder p {
-    font-size: 1rem;
-    font-weight: 500;
-    opacity: 0.7;
+.portrait-image:hover {
+    transform: scale(1.05);
 }
 
 .about-text h3 {
@@ -897,6 +909,85 @@ section {
     animation: spin 1s linear infinite;
 }
 
+/* Demo Section */
+.demo-section {
+    background: var(--surface);
+    padding: 5rem 0;
+}
+
+.demo-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.demo-card {
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.demo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.demo-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2rem;
+    color: white;
+    background: var(--primary-color);
+}
+
+.demo-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.demo-card p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.demo-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.demo-feature {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-secondary);
+}
+
+.demo-feature i {
+    color: var(--success-color);
+    font-size: 1.2rem;
+}
+
+.demo-btn {
+    margin-top: 1rem;
+}
+
 /* Contact Section */
 .contact {
     background: white;
@@ -1123,10 +1214,27 @@ section {
         gap: 2rem;
     }
     
-    .portrait-placeholder {
+    .portrait-image {
         width: 200px;
         height: 250px;
         margin: 0 auto;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+    }
+    
+    .btn-demo {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .demo-card {
+        padding: 2rem;
+    }
+    
+    .demo-features {
+        text-align: center;
     }
 }
 

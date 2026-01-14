@@ -64,7 +64,7 @@ class ScrollAnimations {
         }, observerOptions);
 
         // Observe elements for animation
-        const animatedElements = document.querySelectorAll('.service-card, .contact-link');
+        const animatedElements = document.querySelectorAll('.service-card, .contact-link, .demo-card');
         animatedElements.forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
