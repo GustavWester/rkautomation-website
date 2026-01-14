@@ -352,8 +352,10 @@ section {
 
 .about-portrait {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1.5rem;
 }
 
 .portrait-image {
@@ -367,6 +369,38 @@ section {
 
 .portrait-image:hover {
     transform: scale(1.05);
+}
+
+.portrait-quote {
+    max-width: 280px;
+    text-align: center;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+.portrait-quote::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    font-size: 4rem;
+    color: var(--primary-color);
+    font-family: Georgia, serif;
+    line-height: 1;
+    opacity: 0.3;
+}
+
+.portrait-quote p {
+    margin: 0;
+    color: var(--text-primary);
+    font-style: italic;
+    line-height: 1.6;
+    font-size: 1rem;
+    position: relative;
+    z-index: 1;
 }
 
 .about-text h3 {
@@ -1218,6 +1252,15 @@ section {
         width: 200px;
         height: 250px;
         margin: 0 auto;
+    }
+    
+    .portrait-quote {
+        max-width: 100%;
+        padding: 1.25rem;
+    }
+    
+    .portrait-quote p {
+        font-size: 0.9rem;
     }
     
     .hero-buttons {
